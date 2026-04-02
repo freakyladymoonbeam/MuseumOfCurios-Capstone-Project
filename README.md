@@ -60,8 +60,3 @@ This project was developed as part of a C# assignment to demonstrate object-orie
 
 ## Author
 Jacqueline Warner-Smith
-
----
-
-## License
-This project is for educational purposes.
