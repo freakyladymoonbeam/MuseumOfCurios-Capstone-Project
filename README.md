@@ -36,7 +36,7 @@ This project was developed as part of a C# assignment to demonstrate object-orie
 ## UML Diagram
 
 <p align="center">
-  <img src="JWS - A00333799 - IOT-1026 - MuseumOfCuriosUML.png" alt="UML Diagram" width="600"/>
+  <img src="MuseumOfCuriosUML.png" alt="UML Diagram" width="600"/>
 </p>
 
 ---
