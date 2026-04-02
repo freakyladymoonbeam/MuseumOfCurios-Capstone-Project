@@ -1,4 +1,6 @@
-﻿namespace MuseumOfCurios.Core
+﻿using MuseumOfCurios.Core;
+
+namespace MuseumOfCurios
 {
     class Program
     {
