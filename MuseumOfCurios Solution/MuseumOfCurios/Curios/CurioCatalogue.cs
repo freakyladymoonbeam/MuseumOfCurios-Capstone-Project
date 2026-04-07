@@ -1,13 +1,13 @@
-﻿using MuseumOfCurios.Curios;
-using MuseumOfCurios.Curios.Common;
+﻿using MuseumOfCurios.Curios.Common;
 using MuseumOfCurios.Curios.Rare;
 using MuseumOfCurios.Curios.Epic;
 using MuseumOfCurios.Curios.Legendary;
 using MuseumOfCurios.Curios.Mythical;
+using System.Security.Cryptography.X509Certificates;
 
 namespace MuseumOfCurios.Curios
 {
-    class CurioCatalogue
+    public class CurioCatalogue
     {
         private List<Curio> curios; // This list will hold all the curios in the catalogue
 
@@ -60,6 +60,14 @@ namespace MuseumOfCurios.Curios
 
             }
             return null; // Return null if the index is out of bounds
+        }
+        
+        public void AddCurio(Curio curio) // Method to add a new curio to the catalogue
+        {
+            if (curio != null) // Check if the curio is not null
+            {
+                curios.Add(curio); // Add the curio to the list
+            }
         }
     }
 }

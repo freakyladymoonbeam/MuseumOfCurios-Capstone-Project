@@ -16,6 +16,7 @@ namespace MuseumOfCurios.Core
             {
                 Console.WriteLine($"{i + 1}. {curios[i].Name}");
             }
+            Console.WriteLine("C. Create a new curio");
             Console.WriteLine("X. Exit");
 
             if (!string.IsNullOrEmpty(lastResult))
@@ -34,7 +35,7 @@ namespace MuseumOfCurios.Core
             {
                 DisplayScreen(lastResult);
 
-                string userInput = Console.ReadLine();
+                string userInput = Console.ReadLine().ToLower();
 
                 if (string.IsNullOrWhiteSpace(userInput))
                 {
@@ -42,11 +43,16 @@ namespace MuseumOfCurios.Core
                     continue;
                 }
 
-                if (userInput.ToLower() == "x")
+                if (userInput == "x")
                 {
                     exitRequested = true;
                     Console.WriteLine();
                     Console.WriteLine("Thank you for visiting the Museum of Curios. Goodbye!");
+                }
+                else if (userInput == "c")
+                {
+                    CurioCreator creator = new CurioCreator(catalogue);
+                    lastResult = creator.CreateCurioFlow();
                 }
                 else if (int.TryParse(userInput, out int userChoice))
                 {
