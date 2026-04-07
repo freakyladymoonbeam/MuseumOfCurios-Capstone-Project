@@ -3,7 +3,6 @@ using MuseumOfCurios.Curios.Rare;
 using MuseumOfCurios.Curios.Epic;
 using MuseumOfCurios.Curios.Legendary;
 using MuseumOfCurios.Curios.Mythical;
-using System.Security.Cryptography.X509Certificates;
 
 namespace MuseumOfCurios.Curios
 {
