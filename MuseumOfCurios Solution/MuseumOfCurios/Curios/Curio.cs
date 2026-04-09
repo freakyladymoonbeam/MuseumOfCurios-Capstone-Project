@@ -15,15 +15,18 @@
         public string Name { get; }
         public string Description { get; }
         public RarityLevel Rarity { get; }
+        public bool IsCustom { get; }
 
         protected Curio(
             string name,
             string description,
-            RarityLevel rarity = RarityLevel.Common)
+            RarityLevel rarity = RarityLevel.Common,
+            bool isCustom = false)
         {
             Name = name;
             Description = description;
             Rarity = rarity;
+            IsCustom = isCustom;
         }
 
         public virtual string Examine()
