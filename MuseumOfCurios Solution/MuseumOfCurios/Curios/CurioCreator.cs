@@ -25,7 +25,7 @@
             bool confirmed = ConfirmCurio(ref name, ref description, ref rarity, ref userRequestedExit);
             if (!confirmed) return "Curio creation cancelled.";
 
-            Curio newCurio = new CustomCurio(name, description, rarity);
+            CustomCurio newCurio = new CustomCurio(name, description, rarity);
             _catalogue.AddCurio(newCurio);
 
             return $"Curio \"{name}\" added successfully!";

@@ -11,22 +11,19 @@
 
     public abstract class Curio
     {
-        public Guid Id { get; } = Guid.NewGuid();
         public string Name { get; }
         public string Description { get; }
         public RarityLevel Rarity { get; }
-        public bool IsCustom { get; }
+        public virtual bool IsCustom => false; // Indicates whether this curio is a custom creation, and automatically returns false for all curios that are not explicitly marked as custom
 
         protected Curio(
             string name,
             string description,
-            RarityLevel rarity = RarityLevel.Common,
-            bool isCustom = false)
+            RarityLevel rarity = RarityLevel.Common)
         {
             Name = name;
             Description = description;
             Rarity = rarity;
-            IsCustom = isCustom;
         }
 
         public virtual string Examine()
