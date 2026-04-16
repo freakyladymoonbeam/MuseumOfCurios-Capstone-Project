@@ -1,9 +1,4 @@
-﻿using MuseumOfCurios.Curios.Common;
-using MuseumOfCurios.Curios.Rare;
-using MuseumOfCurios.Curios.Epic;
-using MuseumOfCurios.Curios.Legendary;
-using MuseumOfCurios.Curios.Mythical;
-using System.Reflection;
+﻿using System.Reflection;
 
 namespace MuseumOfCurios.Curios
 {
@@ -61,6 +56,27 @@ namespace MuseumOfCurios.Curios
             if (curio != null) // Check if the curio is not null
             {
                 curios.Add(curio); // Add the curio to the list
+            }
+        }
+
+        public bool RemoveCurioAt(int index, out string message)
+        {
+            if (index >= 0 && index < curios.Count && curios[index].IsCustom) // Check if the index is within bounds
+            {
+                Curio removedCurio = curios[index]; // Store the curio to be removed for the message
+                curios.RemoveAt(index); // Remove the curio at the specified index
+                message = $"Curio \"{removedCurio.Name}\" removed successfully!"; // Set success message
+                return true; // Return true to indicate successful removal
+            }
+            else if (index >= 0 && index < curios.Count && !curios[index].IsCustom)
+            {
+                message = "Cannot remove a non-custom curio."; // Set error message for non-custom curio
+                return false; // Return false to indicate failure
+            }
+            else
+            {
+                message = "Invalid entry. Please enter the number of a valid, custom curio."; // Set error message for invalid index
+                return false; // Return false to indicate failure
             }
         }
     }
