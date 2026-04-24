@@ -1,4 +1,7 @@
-﻿using MuseumOfCurios.Core;
+﻿// Jacqueline Warner-Smith
+// A00333799
+
+using MuseumOfCurios.Core;
 
 namespace MuseumOfCurios
 {
@@ -6,8 +9,8 @@ namespace MuseumOfCurios
     {
         static void Main(string[] args)
         {
-            LibraryApp app = new LibraryApp();
-            app.Run();
+            LibraryController controller = new LibraryController();
+            controller.Run();
         }
     }
 }
